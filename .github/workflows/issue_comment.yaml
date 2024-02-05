@@ -6,6 +6,7 @@ on:
 
 jobs:
   comment-with-action:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: "Dump github context"
@@ -13,7 +14,6 @@ jobs:
         shell: bash
 
       - name: Create comment
-        permissions: write-all
         uses: peter-evans/create-or-update-comment@v4
         with:
           issue-number: ${{ github.event.issue.number }}
