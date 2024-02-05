@@ -36,7 +36,7 @@ jobs:
             Comment from the API call job
             '
           env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+             GH_TOKEN: ${{ github.token }}
             USERNAME: ${{ github.actor }}
             REPOSITORY: ${{ github.event.repository.name }}
             ISSUE_NUMBER: ${{ github.event.issue.number }}
